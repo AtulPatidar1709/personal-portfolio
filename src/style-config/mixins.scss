@@ -1,0 +1,4 @@
+@mixin Typography($weight : 400) {
+    font-style: normal;
+    font-weight: $weight;
+}
