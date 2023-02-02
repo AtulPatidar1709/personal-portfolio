@@ -1,5 +1,5 @@
 import React from "react";
-import Intro from "./components/index.jsx";
+import Intro from "./components/intro/";
 import "./App.scss";
 
 function App() {

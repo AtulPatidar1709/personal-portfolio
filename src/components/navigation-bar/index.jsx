@@ -1,6 +1,8 @@
 import React from 'react'
 import logo from '../../images/logo.png';
-import './index.jsx';
+import '../navigation-bar/style.scss';
+import "../../components/shared/CallToAction"
+import CallToAction from '../../components/shared/CallToAction';
 
 const Navigation = () => {
   return (
@@ -12,6 +14,7 @@ const Navigation = () => {
         <span className="navigation-item">Skills</span>
         <span className="navigation-item">Portfolio</span>
         <span className="navigation-item">Blogs & Artilcles</span>
+       <CallToAction text="Contact Me" />
       </div>
     </div>
   )
