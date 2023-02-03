@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Section from "../shared/section";
 import Filters from "./filters/index.";
+import Showcase from "./showcase";
 import "./style.scss";
 
 const projectsData = [ {
@@ -69,7 +70,16 @@ const projectsData = [ {
 },
 ]
 
+
+
 const Portfolio = () => {
+
+const [projects, setProjects] = useState(projectsData);
+const [transition , setTransition] = useState(false);
+
+const filterProjects = (tag) => {
+    
+}
     return (
         <Section
             id="portfolio"
@@ -77,7 +87,8 @@ const Portfolio = () => {
             background="light"
         >
     <div className="portfolio-content-wrapper">
-        <Filters />
+        <Filters filterProjects ={(tag)=>filterProjects(tag)} />
+        <Showcase  data = {projects} transition={transition} />
     </div>
 
         </Section>
