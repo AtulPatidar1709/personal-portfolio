@@ -2,6 +2,7 @@ import React from "react";
 import Intro from "./components/intro/";
 import Skills from "./components/skills";
 import Portfolio from "./components/portfolioo";
+import Blogs from "./components/blogs/index"
 import "./App.scss";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Intro />
       <Skills />
       <Portfolio/>
+      <Blogs/>
     </div>
 
   );

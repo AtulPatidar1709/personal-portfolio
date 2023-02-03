@@ -4,93 +4,109 @@ import Filters from "./filters/index.";
 import Showcase from "./showcase";
 import "./style.scss";
 
-const projectsData = [ {
-    id : 1,
-    name : "Healthy Food Restraunt",
-    tags : ["web-app", "mobile-app"],
-    media : {
-        thumbnail: require("../../images/portfolio/thumb-7.jpg"),
+const projectsData = [
+    {
+        id: 1,
+        name: "Healthy Food Restraunt",
+        tags: ["web-app", "mobile-app"],
+        media: {
+            thumbnail: require("../../images/portfolio/thumb-7.jpg"),
+        },
     },
-},
-{
-    id : 2,
-    name : "Anna & deniel",
-    tags : ["web-app"],
-    media : {
-        thumbnail: require("../../images/portfolio/thumb-2.jpg"),
+    {
+        id: 2,
+        name: "Anna & deniel",
+        tags: ["web-app"],
+        media: {
+            thumbnail: require("../../images/portfolio/thumb-2.jpg"),
+        },
     },
-},
-{
-    id : 3,
-    name : "Web Design Landing Page",
-    tags : ["web-app"],
-    media : {
-        thumbnail: require("../../images/portfolio/thumb-8.jpg"),
+    {
+        id: 3,
+        name: "Web Design Landing Page",
+        tags: ["web-app"],
+        media: {
+            thumbnail: require("../../images/portfolio/thumb-8.jpg"),
+        },
     },
-},
-{
-    id : 4,
-    name : "Business Analyst Web App",
-    tags : ["web-app","Web-page"],
-    media : {
-        thumbnail: require("../../images/portfolio/thumb-1.jpg"),
+    {
+        id: 4,
+        name: "Business Analyst Web App",
+        tags: ["web-app", "Web-page"],
+        media: {
+            thumbnail: require("../../images/portfolio/thumb-1.jpg"),
+        },
     },
-},
-{
-    id : 5,
-    name : "Limitless",
-    tags : ["web-app","web-page"],
-    media : {
-        thumbnail: require("../../images/portfolio/thumb-6.jpg"),
+    {
+        id: 5,
+        name: "Limitless",
+        tags: ["web-app", "web-page"],
+        media: {
+            thumbnail: require("../../images/portfolio/thumb-6.jpg"),
+        },
     },
-},
-{
-    id : 6,
-    name : "Dashboard",
-    tags : ["web-app","product" , "mobile-app"],
-    media : {
-        thumbnail: require("../../images/portfolio/thumb-4.jpg"),
+    {
+        id: 6,
+        name: "Dashboard",
+        tags: ["web-app", "product", "mobile-app"],
+        media: {
+            thumbnail: require("../../images/portfolio/thumb-4.jpg"),
+        },
     },
-},
-{
-    id : 7,
-    name : "Digital Creative Agency",
-    tags : ["web-app"],
-    media : {
-        thumbnail: require("../../images/portfolio/thumb-3.jpg"),
+    {
+        id: 7,
+        name: "Digital Creative Agency",
+        tags: ["web-app"],
+        media: {
+            thumbnail: require("../../images/portfolio/thumb-3.jpg"),
+        },
     },
-},
-{
-    id : 8,
-    name : "Virtuall Mobile Experiance",
-    tags : ["webb-app","mobile-app" , "web-page"],
-    media : {
-        thumbnail: require("../../images/portfolio/thumb-5.jpg"),
+    {
+        id: 8,
+        name: "Virtuall Mobile Experiance",
+        tags: ["webb-app", "mobile-app", "web-page"],
+        media: {
+            thumbnail: require("../../images/portfolio/thumb-5.jpg"),
+        },
     },
-},
-]
-
-
+];
 
 const Portfolio = () => {
+    const [projects, setProjects] = useState(projectsData);
+    const [transition, setTransition] = useState(false);
 
-const [projects, setProjects] = useState(projectsData);
-const [transition , setTransition] = useState(false);
+    const filterProjects = (tag) => {
+        setTransition("zoomout");
 
-const filterProjects = (tag) => {
-    
-}
+        setTimeout(() => {
+            if (tag !== "all") {
+                const filterProjects = projectsData.filter((f) =>
+                    f.tags.includes(tag)
+                );
+                setProjects(filterProjects);
+            } else {
+                setProjects(projectsData);
+            }
+            setTransition("zoomin");
+        }, 200);
+
+        setTimeout(() => {
+            setTransition(false)
+        },600)
+    };
     return (
         <Section
             id="portfolio"
             tittle="Check My Portfolio"
             background="light"
         >
-    <div className="portfolio-content-wrapper">
-        <Filters filterProjects ={(tag)=>filterProjects(tag)} />
-        <Showcase  data = {projects} transition={transition} />
-    </div>
-
+            <div className="portfolio-content-wrapper">
+                <Filters filterProjects={(tag) => filterProjects(tag)} />
+                <Showcase
+                    data={projects}
+                    transition={transition}
+                />
+            </div>
         </Section>
     );
 };
