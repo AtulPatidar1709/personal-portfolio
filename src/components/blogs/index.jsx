@@ -10,9 +10,9 @@ const Blogs = () => {
   return (
     <Section id="blogs" title="Blogs & Articles" background="dark">
     <div className="blogs-content-wrapper">
-    <BlogCard  user="Atul Patidar" date="01 Jan 2023" image={Blog1} title="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "  />
-    <BlogCard  user="Atul Patidar" date="07 Jan 2023" image={Blog2} title="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "  />
-    <BlogCard  user="Atul Patidar" date="15 Jan 2023" image={Blog3} title="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "  />
+    <BlogCard  user="Atul Patidar" date="01 Jan 2023" image={Blog1} title="Neque porro quisquam est qui dolorem " description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "  />
+    <BlogCard  user="Atul Patidar" date="07 Jan 2023" image={Blog2} title="Neque porro quisquam est qui dolorem " description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "  />
+    <BlogCard  user="Atul Patidar" date="15 Jan 2023" image={Blog3} title="Neque porro quisquam est qui dolorem " description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "  />
     </div>
     </Section>
   )
