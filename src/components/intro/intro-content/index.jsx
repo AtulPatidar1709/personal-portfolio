@@ -18,7 +18,7 @@ const IntroContent = () => {
                         <span className="small-text">
                             <span className="text">Hello</span>
                             <span className="icon">
-                                <img src={hand} />
+                                <img src={hand} alt="" />
                             </span>
                             <span className="text">, I Am</span>
                         </span>
@@ -42,14 +42,14 @@ const IntroContent = () => {
                         alt="Hello I am Keniya Andrew"
                     />
 
-                    <div className="highlights horizontal">
+                    {/* <div className="highlights horizontal">
                         <div className="icon">
                             <BsAwardFill />
                         </div>
                         <div className="text">Best Design Award</div>
-                    </div>
+                    </div> */}
 
-                    <div className="highlights verticle">
+                    {/* <div className="highlights verticle">
                         <div className="icon">
                             <FaUser />
                         </div>
@@ -57,7 +57,7 @@ const IntroContent = () => {
                             <span>4k+</span>
                             Happy Customers
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
