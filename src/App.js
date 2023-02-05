@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./app.scss";
+import "./App.scss";
 
 import Blogs from "./components/blogs";
 import Contact from "./components/contact";
