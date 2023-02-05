@@ -3,7 +3,6 @@
 
 .blog-card {
     display: flex;
-    color: $black;
     background-color: $white;
     flex-direction: column;
     align-items: flex-start;
@@ -33,7 +32,6 @@
         padding-bottom: 55px;
         position: relative;
         flex-grow: 1;
-        color: $black-light;
         background-color: $white;
         @include transition-ease;
         .info-bar {
