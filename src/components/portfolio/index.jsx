@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+
 import Section from "../shared/section";
-import Filters from "./filters/index.";
+import Filters from "./filters";
 import Showcase from "./showcase";
+
 import "./style.scss";
 
 const projectsData = [
@@ -15,8 +17,8 @@ const projectsData = [
     },
     {
         id: 2,
-        name: "Anna & deniel",
-        tags: ["web-app"],
+        name: "Anna & Daniel",
+        tags: ["web-page"],
         media: {
             thumbnail: require("../../images/portfolio/thumb-2.jpg"),
         },
@@ -24,15 +26,15 @@ const projectsData = [
     {
         id: 3,
         name: "Web Design Landing Page",
-        tags: ["web-app"],
+        tags: ["web-page"],
         media: {
             thumbnail: require("../../images/portfolio/thumb-8.jpg"),
         },
     },
     {
         id: 4,
-        name: "Business Analyst Web App",
-        tags: ["web-app", "Web-page"],
+        name: "Business Analytics Web App",
+        tags: ["web-app", "mobile-app"],
         media: {
             thumbnail: require("../../images/portfolio/thumb-1.jpg"),
         },
@@ -48,7 +50,7 @@ const projectsData = [
     {
         id: 6,
         name: "Dashboard",
-        tags: ["web-app", "product", "mobile-app"],
+        tags: ["product", "web-app", "mobile-app"],
         media: {
             thumbnail: require("../../images/portfolio/thumb-4.jpg"),
         },
@@ -63,8 +65,8 @@ const projectsData = [
     },
     {
         id: 8,
-        name: "Virtuall Mobile Experiance",
-        tags: ["webb-app", "mobile-app", "web-page"],
+        name: "Virtual Reality Experience",
+        tags: ["web-app", "mobile-app", "web-page"],
         media: {
             thumbnail: require("../../images/portfolio/thumb-5.jpg"),
         },
@@ -80,10 +82,10 @@ const Portfolio = () => {
 
         setTimeout(() => {
             if (tag !== "all") {
-                const filterProjects = projectsData.filter((f) =>
+                const filteredProjects = projectsData.filter((f) =>
                     f.tags.includes(tag)
                 );
-                setProjects(filterProjects);
+                setProjects(filteredProjects);
             } else {
                 setProjects(projectsData);
             }
@@ -91,13 +93,14 @@ const Portfolio = () => {
         }, 200);
 
         setTimeout(() => {
-            setTransition(false)
-        },600)
+            setTransition(false);
+        }, 600);
     };
+
     return (
         <Section
             id="portfolio"
-            tittle="Check My Portfolio"
+            title="Check My Portfolio"
             background="light"
         >
             <div className="portfolio-content-wrapper">
