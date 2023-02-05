@@ -1,24 +1,33 @@
-import React from 'react';
-import "./style.scss";
+import React from "react";
+
+import Navigation from "./navigation-bar";
+import IntroContent from "./intro-content";
 import cloud from "../../images/cloud.png";
 import cloudSoft from "../../images/cloud-soft.png";
-import Navigation from './navigation-bar';
-import IntroConntent from "./intro-content"
 
+import "./style.scss";
 
 const Intro = () => {
-  return (
-    <div className="Intro_section">
-        <div className="vector_bg" id='parallex'>
+    return (
+        <div className="Intro-section">
+            <div
+                className="vector-bg"
+                id="parallax"
+            ></div>
+            <img
+                src={cloud}
+                className="cloud"
+            />
+            <img
+                src={cloudSoft}
+                className="cloud-soft"
+            />
+            <div className="content">
+                <Navigation />
+                <IntroContent />
+            </div>
         </div>
-        <img  src={cloud} className = "cloud"  alt=''/>
-        <img  src={cloudSoft} className = "cloud-soft"  alt=''/>
-    <div className="contennt">
-      <Navigation/>
-      <IntroConntent />
-    </div>
-    </div>
-  )
-}
+    );
+};
 
-export default Intro
+export default Intro;

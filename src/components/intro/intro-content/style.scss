@@ -5,29 +5,8 @@
     flex-grow: 1;
     display: flex;
     padding-top: 75px;
-    @include small-screen {
-        padding-top: 0;
-        align-items: flex-end;
-    }
-    .layout {
-        display: flex;
-        flex-direction: column;
-        @include small-screen {
-            flex-direction: row;
-        }
-        .left-col {
-            width: 100%;
-            @include small-screen {
-                width: 45%;
-            }
-            @include medium-screen {
-                padding-top: 55px;
-            }
-            @include large-screen {
-                padding-top: 0;
-                width: 37%;
-            }
-            .title {
+    width: 100%;
+ .title {
                 display: flex;
                 flex-direction: column;
                 color: $white;
@@ -43,8 +22,6 @@
                     @include small-screen {
                         justify-content: flex-start;
                         @include typography(42px, 400, 48px);
-                    }
-                    .text {
                     }
                     .icon {
                         margin-left: 10px;
@@ -73,9 +50,8 @@
                     margin: 0;
                 }
             }
-        }
-        .right-col {
-            width: 100%;
+
+            
             display: flex;
             align-items: flex-end;
             position: relative;
@@ -186,6 +162,6 @@
                     }
                 }
             }
+
         }
-    }
-}
+    
