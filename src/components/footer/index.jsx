@@ -80,7 +80,7 @@ const Footer = () => {
                 </div>
                 <div className="bottom-bar">
                     <div className="copyright-text">
-                        Copyright 2022 JS Dev Hindi | All Rights Reserved
+                        Copyright 2022 ATul Patidar | All Rights Reserved
                     </div>
                 </div>
             </div>
